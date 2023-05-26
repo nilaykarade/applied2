@@ -1,0 +1,128 @@
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1
+$ git config --global user.name nilay
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1
+$ git config --global user.email nilaykarade@gmail.com
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1
+$ git init
+Initialized empty Git repository in C:/project1/.git/
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git add index.html
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.html
+
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git commit -m "added index.html file"
+[master (root-commit) 652a303] added index.html file
+ 1 file changed, 13 insertions(+)
+ create mode 100644 index.html
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git commit -m "added designation in index.html"
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git add index.html
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   index.html
+
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git commit -m "added designation in index.html"
+[master c2b4467] added designation in index.html
+ 1 file changed, 1 insertion(+)
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        about.html
+        contact.html
+        projects.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git add -A
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+        new file:   contact.html
+        new file:   projects.html
+
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git commit -m "added more web pages"
+[master d4a229c] added more web pages
+ 3 files changed, 39 insertions(+)
+ create mode 100644 about.html
+ create mode 100644 contact.html
+ create mode 100644 projects.html
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$
