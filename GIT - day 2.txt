@@ -1,0 +1,533 @@
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ user.name
+bash: user.name: command not found
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git --global user.name
+unknown option: --global
+usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git config --global user.name
+nilay
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git checkout index.html
+Updated 1 path from the index
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git checkout index.html
+Updated 1 path from the index
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git commit -m "changed index.html"
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git add-commit -m 'changed index.html'
+git: 'add-commit' is not a git command. See 'git --help'.
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git commit -am 'changed index.html'
+[master 610a82d] changed index.html
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git checkout index.html
+Updated 0 paths from the index
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ ^C
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git checkout 610a82d -- index.html
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git checkout 610a82d index.html
+Updated 0 paths from 743d756
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git checkout -- index.html
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git checkout -f
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git log
+commit 610a82d2dcafc39d13e0ee9602b8388044d547b0 (HEAD -> master)
+Author: nilay <nilaykarade@gmail.com>
+Date:   Sat May 27 16:52:18 2023 +0530
+
+    changed index.html
+
+commit d4a229c1716752c79f925733d0c08d4a364d6cee
+Author: nilay <nilaykarade@gmail.com>
+Date:   Fri May 26 22:56:33 2023 +0530
+
+    added more web pages
+
+commit c2b44676ef211b784d15fb502fabf9820daa9ec2
+Author: nilay <nilaykarade@gmail.com>
+Date:   Fri May 26 22:45:19 2023 +0530
+
+    added designation in index.html
+
+commit 652a30344813491677bf08a7e99e92ee9a706c13
+Author: nilay <nilaykarade@gmail.com>
+Date:   Fri May 26 22:20:06 2023 +0530
+
+    added index.html file
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git log
+commit 610a82d2dcafc39d13e0ee9602b8388044d547b0 (HEAD -> master)
+Author: nilay <nilaykarade@gmail.com>
+Date:   Sat May 27 16:52:18 2023 +0530
+
+    changed index.html
+
+commit d4a229c1716752c79f925733d0c08d4a364d6cee
+Author: nilay <nilaykarade@gmail.com>
+Date:   Fri May 26 22:56:33 2023 +0530
+
+    added more web pages
+
+commit c2b44676ef211b784d15fb502fabf9820daa9ec2
+Author: nilay <nilaykarade@gmail.com>
+Date:   Fri May 26 22:45:19 2023 +0530
+
+    added designation in index.html
+
+commit 652a30344813491677bf08a7e99e92ee9a706c13
+Author: nilay <nilaykarade@gmail.com>
+Date:   Fri May 26 22:20:06 2023 +0530
+
+    added index.html file
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git log -p -2
+commit 610a82d2dcafc39d13e0ee9602b8388044d547b0 (HEAD -> master)
+Author: nilay <nilaykarade@gmail.com>
+Date:   Sat May 27 16:52:18 2023 +0530
+
+    changed index.html
+
+diff --git a/index.html b/index.html
+index aa9db0f..24405c0 100644
+--- a/index.html
++++ b/index.html
+@@ -4,11 +4,12 @@
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-    <title>Document</title>
++    <title>Dr. Nilay - Home page</title>
+ </head>
+ <body>
+     <h1>Welcome to my profile </h1>
+     <h2>Dr. Nilay Karade</h2>
+     <h3>Program manager - Data Science</h3>
++    <p>Hi, welcome to my profile page. Thank you for showing  .......</p>
+ </body>
+:
+commit 610a82d2dcafc39d13e0ee9602b8388044d547b0 (HEAD -> master)
+Author: nilay <nilaykarade@gmail.com>
+Date:   Sat May 27 16:52:18 2023 +0530
+
+    changed index.html
+
+diff --git a/index.html b/index.html
+index aa9db0f..24405c0 100644
+--- a/index.html
++++ b/index.html
+@@ -4,11 +4,12 @@
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-    <title>Document</title>
++    <title>Dr. Nilay - Home page</title>
+ </head>
+ <body>
+     <h1>Welcome to my profile </h1>
+     <h2>Dr. Nilay Karade</h2>
+     <h3>Program manager - Data Science</h3>
++    <p>Hi, welcome to my profile page. Thank you for showing  .......</p>
+ </body>
+:
+commit 610a82d2dcafc39d13e0ee9602b8388044d547b0 (HEAD -> master)
+Author: nilay <nilaykarade@gmail.com>
+Date:   Sat May 27 16:52:18 2023 +0530
+
+    changed index.html
+
+diff --git a/index.html b/index.html
+index aa9db0f..24405c0 100644
+--- a/index.html
++++ b/index.html
+@@ -4,11 +4,12 @@
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-    <title>Document</title>
++    <title>Dr. Nilay - Home page</title>
+ </head>
+ <body>
+     <h1>Welcome to my profile </h1>
+     <h2>Dr. Nilay Karade</h2>
+     <h3>Program manager - Data Science</h3>
++    <p>Hi, welcome to my profile page. Thank you for showing  .......</p>
+ </body>
+:
+commit 610a82d2dcafc39d13e0ee9602b8388044d547b0 (HEAD -> master)
+Author: nilay <nilaykarade@gmail.com>
+Date:   Sat May 27 16:52:18 2023 +0530
+
+    changed index.html
+
+diff --git a/index.html b/index.html
+index aa9db0f..24405c0 100644
+--- a/index.html
++++ b/index.html
+@@ -4,11 +4,12 @@
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-    <title>Document</title>
++    <title>Dr. Nilay - Home page</title>
+ </head>
+ <body>
+     <h1>Welcome to my profile </h1>
+     <h2>Dr. Nilay Karade</h2>
+     <h3>Program manager - Data Science</h3>
++    <p>Hi, welcome to my profile page. Thank you for showing  .......</p>
+ </body>
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git checkout 610a82d2dcafc39d13e0ee9602b8388044d547b0 -- index.html
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   about.html
+        modified:   contact.html
+        modified:   projects.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git status -s
+ M about.html
+ M contact.html
+ M projects.html
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git add about.html
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git status -s
+M  about.html
+ M contact.html
+ M projects.html
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git add -A
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git status -s
+M  about.html
+M  contact.html
+M  projects.html
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git status -s
+MM about.html
+M  contact.html
+M  projects.html
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git add -A
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git commit -am 'changed all html files'
+[master 36c4bc9] changed all html files
+ 3 files changed, 4 insertions(+), 2 deletions(-)
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git status -s
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git commit -am 'added gitignore file to exclude .csv files'
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git commit -am 'added gitignore file to exclude .csv files'
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git add _A
+fatal: pathspec '_A' did not match any files
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git add -A
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git commit -m 'added gitignore file to exclude .csv files'
+[master a4be755] added gitignore file to exclude .csv files
+ 1 file changed, 1 insertion(+)
+ create mode 100644 .gitignore
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git add -A
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git commit -m 'added gitignore file to exclude .log files'
+[master def05ab] added gitignore file to exclude .log files
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git add -A
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git commit -m 'added gitignore file to exclude data folder'
+[master cf982f4] added gitignore file to exclude data folder
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git brnach ui-feature
+git: 'brnach' is not a git command. See 'git --help'.
+
+The most similar command is
+        branch
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git brnach feature1
+git: 'brnach' is not a git command. See 'git --help'.
+
+The most similar command is
+        branch
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git branch feature1
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git branch
+  feature1
+* master
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git checkout feature1
+Switched to branch 'feature1'
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (feature1)
+$ git branch
+* feature1
+  master
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (feature1)
+$ git commit -a -m commit "Changed the background color in index file"
+fatal: paths 'Changed the background color in index file ...' with -a does not make sense
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (feature1)
+$ git status
+On branch feature1
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (feature1)
+$ git add -A
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (feature1)
+$ git commit -m commit "Changed the background color in index file"
+error: pathspec 'Changed the background color in index file' did not match any file(s) known to git
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (feature1)
+$ git commit -m "Changed the background color in index file"
+[feature1 192152c] Changed the background color in index file
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (feature1)
+$ git checkout mater
+error: pathspec 'mater' did not match any file(s) known to git
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (feature1)
+$ git checkout master
+Switched to branch 'master'
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git branch
+  feature1
+* master
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git checkout feature1
+Switched to branch 'feature1'
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (feature1)
+$ git status
+On branch feature1
+nothing to commit, working tree clean
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (feature1)
+$ git checkout master
+Switched to branch 'master'
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git branch
+  feature1
+* master
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git merge feature1
+Updating cf982f4..192152c
+Fast-forward
+ index.html | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git remote add origin https://github.com/nilaykarade/project1.git
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git push origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/nilaykarade/project1.git'
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/nilaykarade/project1.git'
+
+nilay@DESKTOP-AS3VTND MINGW64 /c/project1 (master)
+$ git push -u origin master
+Enumerating objects: 31, done.
+Counting objects: 100% (31/31), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (26/26), done.
+Writing objects: 100% (31/31), 2.95 KiB | 604.00 KiB/s, done.
+Total 31 (delta 13), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (13/13), done.
+To https://github.com/nilaykarade/project1.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
